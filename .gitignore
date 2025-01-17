@@ -1,1 +1,6 @@
 _site/
+.jekyll-cache/
+Gemfile
+Gemfile.lock
+.jekyll-metadata
+script.sh

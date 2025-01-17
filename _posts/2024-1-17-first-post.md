@@ -1,5 +1,13 @@
+---
+layout: post
+title:  "building my blog"
+excerpt: "1st post"
+date:   2024-01-18 00:30:00
+render_with_liquid: false
+---
+
 # 关于各个html文件的作用解释
-## `index.html`
+## `index.html`文件
 ```html
 ---
 layout: default
@@ -78,7 +86,7 @@ layout: default
 ```
 + 关闭`ul`和`div`标签。
 
-## `_layouts/default.html`
+## `_layouts/default.html`文件
 ```html
 <!DOCTYPE html>
 <html>
@@ -104,19 +112,25 @@ layout: default
 
 ### 1. `<!DOCTYPE html>`
 + 这是 HTML5 的文档类型声明，告诉浏览器这是一个 HTML5 文档。
+
 ### 2. `<html>` 标签
 + 这是 HTML 文档的根元素，所有内容都包含在这个标签内。
+
 ### 3. `{% include head.html %}`
 + 这是 Liquid 模板语言的 include 语句，用于将 `_includes/head.html` 文件的内容插入到这里。
 + `head.html` 通常包含页面的元数据（如 `<title>`、`<meta>` 标签）、CSS 文件链接、JavaScript 文件链接等。
 + 通过这种方式，可以将页面的头部内容集中管理，避免重复代码。
-### 4. `<body>`标签
+
+### 4. `<body>`
 + 这是 HTML 文档的主体部分，页面的可见内容都包含在这里。
+
 ### 5. `{% include header.html %}`
 + 这是另一个 include 语句，用于将 `_includes/header.html` 文件的内容插入到这里。
 + `header.html` 通常包含网站的导航栏、Logo、页眉等内容。
 + 通过这种方式，可以在多个页面中复用相同的页眉内容。
+
 ### 6. 页面内容区域
+
 ```html
 <div class="page-content">
   <div class="wrap">
@@ -124,18 +138,21 @@ layout: default
   </div>
 </div>
 ```
+
 + `{{ content }}` 是 Liquid 模板语言的占位符，表示其他页面（如 Markdown 文件或其他 HTML 文件）的内容会被插入到这里。
 + `div class="page-content"` 和 `div class="wrap"` 是用于布局和样式的容器，通常用于控制页面的宽度、边距等。
 + 例如，如果一个 Markdown 文件指定了 `layout: default`，那么它的内容会被渲染并插入到 `{{ content }}` 的位置。
+
 ### 7. `{% include footer.html %}`
 + 这是另一个 include 语句，用于将 `_includes/footer.html` 文件的内容插入到这里。
 + `footer.html` 通常包含网站的页脚内容，如版权信息、联系方式、社交媒体链接等。
 + 通过这种方式，可以在多个页面中复用相同的页脚内容。
+
 ### 8. 结束标签
 + 关闭 `body` 和 `html` 标签，表示 HTML 文档的结束。
+
 ### 总结
 这个 default.html 文件定义了一个通用的页面结构，包括：
-
 + 头部（`head.html`）：包含页面的元数据和资源链接。
 + 页眉（`header.html`）：包含导航栏和 Logo 等内容。
 + 内容区域（`{{ content }}`）：动态插入其他页面的内容。
