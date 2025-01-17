@@ -1,0 +1,17 @@
+# Site settings
+title: ZRH Blog
+email: 
+description: "CS Explorer"
+baseurl: ""
+url: "http://cybotiger.github.io"
+github_username: cybotiger
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM                # GitHub Flavored Markdown  
+  auto_ids: true            # 自动为标题生成 id 属性。
+  syntax_highlighter: rouge 
