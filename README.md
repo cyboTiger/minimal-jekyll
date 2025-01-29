@@ -1,2 +1,2 @@
-# my personal blog
-URL: [cybotiger.github.io](cybotiger.github.io)
+# my initial blog
+borrowed from (andrej karpathy blog)[https://karpathy.github.io/]
